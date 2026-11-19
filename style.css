@@ -1,0 +1,190 @@
+/*
+ * ECOS DEL TIEMPO - EXTENSION FIREFOX
+ * Mantengo una estética sencilla con fondo oscuro y colores suaves.
+ * El canvas usa p5.js y los botones se diseñan con CSS.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 340px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0a0f1c;
+  color: #f8f8ff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.extension {
+  padding: 16px 18px 14px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-family: Consolas, "Lucida Console", monospace;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+
+.cabecera p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  color: #a7b1c7;
+}
+
+.estado {
+  display: inline-block;
+  flex-shrink: 0;
+  border: 1px solid #434b69;
+  border-radius: 20px;
+  padding: 5px 7px;
+  color: #d6ddf5;
+  font-size: 10px;
+}
+
+.visualizacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 9px 0 7px;
+}
+
+#zona-canvas {
+  width: 300px;
+  height: 150px;
+}
+
+#zona-canvas canvas {
+  display: block;
+}
+
+.temporizador {
+  padding: 12px 11px;
+  border: 1px solid #283047;
+  border-radius: 12px;
+  background: #11182a;
+}
+
+.tiempo-encabezado,
+.selector-etiqueta,
+.rango-texto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tiempo-encabezado span,
+.selector-etiqueta span {
+  color: #b6bed4;
+  font-size: 11px;
+}
+
+.tiempo-encabezado strong {
+  font: bold 23px Consolas, "Lucida Console", monospace;
+  letter-spacing: 1px;
+}
+
+.barra {
+  height: 7px;
+  overflow: hidden;
+  margin: 9px 0 18px;
+  border-radius: 12px;
+  background: #2d3348;
+}
+
+.avance {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #89abd6, #d3a5bf);
+  transition: width 180ms linear;
+}
+
+.selector-etiqueta {
+  margin-bottom: 10px;
+}
+
+.selector-etiqueta strong {
+  color: #c9a5e3;
+  font-size: 12px;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 0;
+  accent-color: #bd94dd;
+  cursor: pointer;
+}
+
+input[type="range"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rango-texto {
+  margin: 4px 0 15px;
+  color: #8995b1;
+  font-size: 10px;
+}
+
+.botones {
+  display: flex;
+  gap: 9px;
+}
+
+button {
+  flex: 1;
+  min-height: 38px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #b6a0df;
+  color: #151122;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+button.secundario {
+  background: transparent;
+  color: #e4def4;
+  border-color: #565572;
+}
+
+.ayuda {
+  min-height: 28px;
+  margin: 11px 0 0;
+  color: #c3cbdd;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+footer {
+  margin-top: 12px;
+  text-align: center;
+  color: #8795b0;
+  font-size: 10px;
+  line-height: 1.4;
+}

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Ecos del tiempo - Pausa",
+  "version": "1.0.0",
+  "description": "Un temporizador de descansos con las ondas del reloj creativo Ecos del tiempo.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Ecos del tiempo",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icono-48.png",
+      "96": "icons/icono-96.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icono-48.png",
+    "96": "icons/icono-96.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ecos-del-tiempo-pausa@extension.example"
+    }
+  }
+}

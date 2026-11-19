@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecos del tiempo - Pausa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="extension">
+    <header class="cabecera">
+      <div>
+        <h1>ECOS DEL TIEMPO</h1>
+        <p>Una pausa entre ondas</p>
+      </div>
+      <span id="estado" class="estado" role="status">Preparado</span>
+    </header>
+
+    <section class="visualizacion" aria-label="Animación del temporizador">
+      <div id="zona-canvas"></div>
+    </section>
+
+    <section class="temporizador" aria-label="Control del tiempo">
+      <div class="tiempo-encabezado">
+        <span>TIEMPO RESTANTE</span>
+        <strong id="contador" aria-live="off">05:00</strong>
+      </div>
+      <div class="barra" role="progressbar" aria-label="Progreso de la pausa"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-progreso">
+        <div class="avance" id="avance"></div>
+      </div>
+      <label class="selector-etiqueta" for="duracion">
+        <span>Duración de la pausa</span>
+        <strong id="duracion-texto">5 min</strong>
+      </label>
+      <input id="duracion" type="range" min="1" max="30" value="5" step="1">
+      <div class="rango-texto"><span>1 min</span><span>30 min</span></div>
+      <div class="botones">
+        <button id="boton-principal" type="button">Iniciar pausa</button>
+        <button id="boton-reiniciar" type="button" class="secundario">Reiniciar</button>
+      </div>
+      <p class="ayuda" id="mensaje">Selecciona un tiempo y pulsa Iniciar.</p>
+    </section>
+
+    <footer>Las ondas representan los segundos · El color, la hora actual</footer>
+  </main>
+  <script src="lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
